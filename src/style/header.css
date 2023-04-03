@@ -1,0 +1,106 @@
+.header-content {
+  display: grid;
+  grid-template-columns: 1fr 75% 1fr;
+  grid-template-rows: 150px 1fr;
+}
+.nav-list {
+  list-style: none;
+  align-self: center;
+  justify-self: end;
+  font-size: 30px;
+  grid-area: 1/2/1/4;
+}
+.li-item {
+  display: inline-block;
+  padding: 20px;
+  cursor: pointer;
+  transition: opacity 100ms;
+}
+.li-item:hover {
+  opacity: 50%;
+  color: green;
+}
+.header {
+  position: relative;
+}
+
+.header .logo {
+  grid-area: 1/1/1/2;
+  background-image: url("../img/Logo.svg");
+  background-repeat: no-repeat;
+  width: 200px;
+  min-height: 100px;
+  background-blend-mode: multiply;
+  background-position: center center;
+  padding: 10px;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+.header .baner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url("../img/Poster.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate(-50%, 0%);
+  z-index: 1;
+  left: 50%;
+  top: 0px;
+  grid-area: 2/2/2/3;
+}
+
+.bg-2 {
+  height: 100%;
+  background: url("../img/bgAsset 4.svg");
+  background-position: center center;
+  background-size: contain;
+  opacity: 50%;
+  z-index: -1;
+  grid-area: 2/1/2/4;
+}
+.header .baner::after {
+  content: "New collection";
+  font-size: 3rem;
+  position: absolute;
+  top: 100px;
+  right: 10px;
+}
+.header .baner::before {
+  content: "SS`23";
+  font-size: 1.5rem;
+  position: absolute;
+  top: 160px;
+  right: 15px;
+}
+
+.footer {
+  text-align: left;
+  padding: 50px;
+}
+@media screen and (max-width: 777px) {
+  .bg-2 {
+    width: 100%;
+    height: 320px;
+    background: url("../img/bgAsset 4.svg");
+    background-position: center center;
+    position: relative;
+    z-index: -1;
+    top: -300px;
+    opacity: 50%;
+  }
+  .li-item {
+    display: block;
+    padding: 20px;
+    cursor: pointer;
+  }
+  .nav-list {
+    list-style: none;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    grid-area: 2/1/2/2;
+  }
+}
