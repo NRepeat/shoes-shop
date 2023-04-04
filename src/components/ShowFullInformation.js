@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-export class Item extends Component {
+export class ShowFullInformation extends Component {
   render() {
     return (
-      <div className="item">
+      <div className="full-item">
         <img
           onClick={() => this.props.fullDiscript(this.props.item)}
           className="item-img "
@@ -20,8 +20,9 @@ export class Item extends Component {
           Add to cart
         </div>
       </div>
+      
     );
   }
 }
 
-export default Item;
+export default ShowFullInformation;
