@@ -28,16 +28,18 @@ export default function Header(props) {
   return (
     <header className="header">
       <div className="header-content">
+        <nav className="nav-bar">
         <div className="logo"></div>
-        <nav className="nav-list">
+        <div onClick={() => setCartOpen((cartOpen = !cartOpen))}
+              className={ ` shop-bag-button ${cartOpen && "active"}`}></div>
           <ul>
-            <FaShoppingBag
-              onClick={() => setCartOpen((cartOpen = !cartOpen))}
-              className={`shop-bag-button ${cartOpen && "active"}`}
-            />
+            
+              
+            
             <li className="li-item">Conatacts</li>
             <li className="li-item">Personal account</li>
           </ul>
+          <div className="hamburger"></div>
         </nav>
         {cartOpen &&( <div className="shop-bag">
           {props.orders.length > 0 ?
@@ -48,7 +50,7 @@ export default function Header(props) {
           )}
         <div className="bg-2"></div>
         <div className="bg"></div>
-        <div className="baner"></div>
+        
       </div>
     </header>
   );

@@ -4,6 +4,7 @@ import Items from "./components/items";
 import Categories from "./components/cotegories";
 import React from "react";
 import ShowFullInformation from "./components/ShowFullInformation";
+import Main from "./components/main";
 
 class App extends React.Component {
   constructor(props) {
@@ -59,6 +60,7 @@ class App extends React.Component {
     return (
       <div className="wrapper">
         <Header orders={this.state.orders} onDelete={this.deleteOrder} />
+        <Main />
         <Categories selectCategory={this.selectCategory} />
         <Items
           fullDiscript={this.fullDiscript}

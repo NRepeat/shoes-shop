@@ -11,7 +11,7 @@ export class Item extends Component {
           alt=""
         ></img>
         <h2 className="h2">{this.props.item.title}</h2>
-        <p className="p">{this.props.item.desc}</p>
+        
         <p className="p dolar">{this.props.item.price}</p>
         <div
           className="add-to-cart"
